@@ -20,7 +20,7 @@ Project consists of configuring a Windows Server with a Splunk Universal Forward
 
 <p align="center">
 To begin I configured by Splunk instance to receive data from my Windows Server, by setting it to listen on port 9997: <br/>
-<img src="https://github.com/user-attachments/assets/ae5bf145-2834-4342-9689-363f110fbf02" height="80%" width="80%" alt="Splun"/>
+<img src="https://github.com/user-attachments/assets/ae5bf145-2834-4342-9689-363f110fbf02" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 I then created a new index and labeled it "wineventlog:  <br/>
