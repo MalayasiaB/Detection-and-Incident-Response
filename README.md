@@ -20,43 +20,43 @@ Project consists of configuring a Windows Server with a Splunk Universal Forward
 
 <p align="center">
 To begin I configured by Splunk instance to receive data from my Windows Server, by setting it to listen on port 9997: <br/>
-<img src="images/filename1.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename1.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 I then created a new index and labeled it "wineventlog:  <br/>
-<img src="images/#2.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename2.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 From there, I navigated to the Splunk web page to download the Splunk Universal Forwarder for my system and begin installation: <br/>
-<img src="images/#3.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename3.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 I specified my installation options, created my credentials for my Admin account,entered the IP of my deployment server as well as the default port and completed installation:  <br/>
-<img src="images/#4.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename4.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 In my Splunk instance I chose the data ingestion method as forwarder, and configured. Below you can the name, the index and forwarder selected, as well as the event log to pull from:  <br/>
-<img src="images/#5.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename5.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 Before navigating back to my Windows Server, I installed the following add-ons within my Splunk instance. The Windows add-on includes predefined inputs to collect data from the Windows systems:  <br/>
-<img src="images/#6.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename6.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 The Sysmon add-on provides continuous Sysmon-to-Splunk integration for real-time streaming of detections, events, incidents, and audit data:  <br/>
-<img src="images/#7.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename7.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 Navigated to MITRE webpage, found the specific Powershell technique I'd be executing and made note of commands to look for:  <br/>
-<img src="images/#8.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename8.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 Installing Sysmon and accepting license on my Windows Server:  <br/>
-<img src="images/#9.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename9.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 Creating inputs.conf file:  <br/>
-<img src="images/#10.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename10.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 Output.conf file:  <br/>
