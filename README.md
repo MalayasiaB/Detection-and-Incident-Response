@@ -60,43 +60,43 @@ Creating inputs.conf file:  <br/>
 <br />
 <br />
 Output.conf file:  <br/>
-<img src="images/#11.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename11.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 Turned off virus protection for the duration of this lab to avoid interference with the simulated attack techniques:  <br/>
-<img src="images/#12.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename12.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 I then navigated to the Atomic Red Team web page and installed the execution framework. Once installed I ran show details for T1059.001 to gather more information:  <br/>
-<img src="images/#13.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename13.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 Running the atomic tests 1-3:  <br/>
-<img src="images/#14.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename14.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 Inside Splunk, I navigated to the wineventlog index and began to investigate the data that came through:  <br/>
-<img src="images/#15.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename15.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 There were specific commands that I wanted to find so I ran the search command to see what results it would bring back. I navigated to the command field and found the simulated Powershell attack:  <br/>
-<img src="images/#16.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename16.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 I created the following SPL query, searching the command line for the following: IEX, DownloadString, and Mimikatz and putting that information in a table by the host, user, parent image(process that launched the executable), command line and image(executable that was launched):  <br/>
-<img src="images/#17.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename17.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 From the table I found critical information such as Bloodhound, Sharphound and Invoke-Mimikatz-Dumpcreds. So I built an alert to test if my query could detect this attack:  <br/>
-<img src="images/#18.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename18.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 I ran the Atomic Test again and my alert triggered successfully:  <br/>
-<img src="images/#19.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename19.png" height="80%" width="80%" alt="Splunk"/>
 <br />
 <br />
 With the successful trigger of my alert I also recieved Slack notifications confirming that end-to-end functionality for response automation:  <br/>
-<img src="images/#20.png" height="80%" width="80%" alt="Splunk"/>
+<img src="./images/filename20.png" height="80%" width="80%" alt="Splunk"/>
 </p>
 
 <!--
